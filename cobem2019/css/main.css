@@ -1,0 +1,209 @@
+@font-face {
+  font-family: cobemfont;
+  src: local("salzburg.ttf"), url("salzburg.ttf");
+}
+@font-face {
+  font-family: cobemtitle;
+  src: local("DeValencia.otf"), url("DeValencia.otf");
+}
+#body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #ffffff;
+}
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 20px;
+  background: #ecd653;
+  width: 100%;
+  height: 60px;
+  box-sizing: border-box;
+  border-top: 1px solid #ecd653;
+  border-bottom: 1px solid #ecd653;
+  border-right: 3px solid black;
+  -webkit-blend-mode: overlay;
+  box-shadow: 6px 6px 6px rgba(130, 130, 130, 0.5);
+  z-index: 3;
+}
+.cabeca {
+}
+.logo {
+  font-family: cobemtitle;
+  font-weight: bold;
+  color: black;
+  height: 55px;
+  width: 161px;
+  line-height: 60px;
+  font-size: 24px;
+  float: left;
+  font-weight: bold;
+  padding-left: 20px;
+  font-family: sans-serif;
+}
+#search {
+  position: relative;
+  height: 60px;
+  float: right;
+}
+.menu-toggle {
+  color: #494949;
+  float: left;
+  line-height: 60px;
+  font-size: 24px;
+  cursor: pointer;
+}
+#bt-search {
+  font-size: 24px;
+}
+.insta {
+  text-align: center;
+  height: 50%;
+  background: black;
+  border-top: 2px solid #fbf152;
+}
+.navp {
+  z-index: 2;
+  box-shadow: 6px 6px 6px rgba(130, 130, 130, 0.5);
+  position: absolute;
+  width: 20%;
+  height: calc(100vh - 60px);
+  background: black;
+  top: 59px;
+  left: 0;
+  transition: 0.5s;
+}
+header nav ul {
+  height: 50vh;
+  background: #4b4b4b;
+  margin: 0;
+  padding: 0;
+  display: block;
+  text-align: left;
+  border-bottom: 1px solid #fbf152;
+}
+header nav ul li {
+  list-style: none;
+}
+header nav ul li a {
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+  color: #fbf152;
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+}
+header nav ul li a:hover,
+header nav ul li a.active {
+  font-weight: bold;
+  text-decoration: none;
+  background: #f8f9fa;
+  color: black;
+  transition: 0.5s;
+}
+
+.navp.active {
+  left: -100%;
+}
+.conteudo {
+  background: #ffffff;
+  padding-top: 60px;
+  padding-left: 20%;
+  transition: 0.5s;
+  z-index: 0;
+}
+.conteudo.active {
+  padding-left: 0;
+}
+#botao {
+  position: relative;
+  top: 20vh;
+  transform: translateY(-20vh);
+  margin: 10%;
+  background: #ecd653;
+  width: 50px;
+  height: 50px;
+  padding: 6px 0px;
+  border-radius: 25px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.42857;
+}
+#texto {
+  margin: 10px;
+}
+.card-body {
+  background: #f8f9fa;
+}
+.card-body a {
+  color: black;
+  background: #ecd653;
+  border: #7c7e1d;
+  font-weight: bold;
+}
+.card-body a:hover {
+  color: #ecd653;
+  background: #f8f9fa;
+  border: #7c7e1d;
+}
+.nav {
+  text-align: center;
+}
+.nav-item {
+  color: black;
+  font-weight: bold;
+  background: #ffffff;
+}
+.nav-item:hover,
+.nav-item.active {
+  color: #7c7e1d;
+  transition: 0.5s;
+}
+
+table.gsc-search-box {
+  display: none !important;
+}
+.sea {
+  position: absolute;
+  top: 20px;
+}
+#texto::-webkit-search-cancel-button {
+  position: relative;
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  background: transparent url("../img/cancel.png") no-repeat;
+}
+@media (max-width: 991px) {
+  .menu-toggle {
+    display: block;
+  }
+  .navp {
+    position: absolute;
+    width: 70%;
+    height: calc(100vh - 60px);
+    background: #f8f9fa;
+    left: -100%;
+    transition: 0.5s;
+  }
+  .navp.active {
+    left: 0;
+  }
+  header nav ul {
+    display: block;
+    text-align: left;
+    border-bottom: 1px solid #fbf152;
+  }
+  .conteudo {
+    padding-top: 60px;
+    padding-left: 0;
+  }
+  #texto {
+    display: none;
+    transition: 0.5s;
+  }
+}
