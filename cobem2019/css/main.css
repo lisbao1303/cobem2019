@@ -31,11 +31,8 @@ header {
 .cabeca {
 }
 .logo {
-  font-family: cobemtitle;
-  font-weight: bold;
-  color: black;
   height: 55px;
-  width: 161px;
+  width: 160px;
   line-height: 60px;
   font-size: 24px;
   float: left;
